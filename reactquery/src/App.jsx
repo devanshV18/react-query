@@ -1,14 +1,15 @@
-import React from 'react'
-import {useQuery} from '@tanstack/react-query'
-
 import './App.css'
+import PostList from './components/PostList'
 
 function App() {
-
-  useQuery
+  
 
   return (
-    <div>React Query</div>
+    <div>
+      <h2 className='title'>My Posts</h2>
+      <PostList/>
+    </div>
+    
   )
 }
 
