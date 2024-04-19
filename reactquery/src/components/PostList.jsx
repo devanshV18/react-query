@@ -22,11 +22,20 @@ const PostList = () => {
 
     })
 
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      const formData = new FormData(e.target);
+      const title = formData.get("title")
+      const tags = Array.from(formData.keys()).filter((key) => formData.get(key)==="on")
+
+      console.log(title,tags)
+    }
+
 
   return (
     <div className='container'>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <input 
           type="text" 
           placeholder='Enter your post'
